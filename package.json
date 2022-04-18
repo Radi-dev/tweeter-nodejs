@@ -1,0 +1,8 @@
+{
+  "name": "tweeter-nodejs",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/Radi-dev/tweeter-nodejs.git",
+  "author": "Radi-dev <evaradi18@gmail.com>",
+  "license": "MIT"
+}
