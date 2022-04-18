@@ -23,6 +23,7 @@ const T = new TwitterApi({
 //The tweeting function
 const tweet =async (text) => {
     await T.v2.tweetThread(splitIntoThread(text));
+    //post as thread
 
     //T.post("statuses/update",{status:text},onComplete);
 };
