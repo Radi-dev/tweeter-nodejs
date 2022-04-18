@@ -1,4 +1,3 @@
-
 const Twit = require("twit");
 require('dotenv').config();
 
@@ -10,6 +9,20 @@ const T = new Twit({
     , access_token_secret: process.env.ACCESS_TOKEN_SECRET
 })
 
+//The tweeting function
+const tweet = (text)=>{
+    const onComplete = (err,reply)=>{
+        if(err){
+            console.log("Error:",err.message);
+        }
+        else{
+            console.log("Success:",reply);
+        }
+    };
+    //console.log(text)
+    //return text
+    T.post("statuses/update",{status:text},onComplete);
+};
 
 
-console.log("T is",T)
+module.exports = tweet;
